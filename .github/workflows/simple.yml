@@ -8,7 +8,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: echo a string
-        run: echo "Hello World"
+        run: |
+          echo "Hello World"
+          echo " this is new Workflow from me"
       - name: multiline script
         # run multiple script
         run: |
