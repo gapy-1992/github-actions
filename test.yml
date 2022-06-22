@@ -1,0 +1,21 @@
+name: Ali
+age: 28
+address: "thuong tru: 120312301"
+active: true
+key:
+  pub: "abc"
+  pri: 123
+  jsonObject:
+array:
+  - item1
+  - item2
+  - items:
+      abc: 12
+jsonArrays: [json1, json2]
+
+objectArray:
+  - key: value
+    key2: value2
+
+  - key3: value3
+  - 123
