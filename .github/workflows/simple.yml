@@ -16,3 +16,9 @@ jobs:
         run: |
           node -v
           npm -v
+  run-windows-commands:
+    runs-on: windows-latest
+    steps:
+      - name: Directory powerShell
+        run: pwd
+        shell: bash
