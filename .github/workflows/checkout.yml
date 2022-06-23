@@ -6,6 +6,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: list files
-        run: |
+        id: list-file
+        run: | # not checkout repo so this time cant see any files
           pwd
-          ls
+          ls 
+          echo $GITHUB_SHA
+          echo $GITHUB_WORKSPACE
+      - name: log files
