@@ -17,8 +17,8 @@ on:
       - "feature/*" # this apply for any branch start from feature/. not work with feature/abcd/*/
       - "feature/**" # work with feature/ and feature/*/*
       - "!feature/featc" # ignore this branch
-    paths:
-      - "**.js" #the following workflow would run anytime you push a JavaScript file
+    # paths:
+    #   - "**.js" #the following workflow would run anytime you push a JavaScript file
 jobs:
   list-file:
     runs-on: ubuntu-latest
@@ -27,7 +27,7 @@ jobs:
         id: list-file
         run: |
           pwd
-          ls 
+          ls -a
           echo $GITHUB_SHA
           echo $GITHUB_WORKSPACE
       - name: checkout-step
