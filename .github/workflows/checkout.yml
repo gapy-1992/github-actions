@@ -1,6 +1,6 @@
 name: check out project
 
-on: [push]
+on: [push, pull_request]
 jobs:
   list-file:
     runs-on: ubuntu-latest
