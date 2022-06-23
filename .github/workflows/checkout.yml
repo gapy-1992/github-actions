@@ -12,4 +12,3 @@ jobs:
           ls 
           echo $GITHUB_SHA
           echo $GITHUB_WORKSPACE
-      - name: log files
