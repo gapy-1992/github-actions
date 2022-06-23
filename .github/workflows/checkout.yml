@@ -6,6 +6,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: list files
+        id: list-file
         run: |
           pwd
-          ls
+          ls 
+          echo $GITHUB_SHA
+          echo $GITHUB_WORKSPACE
+      - name: log files
