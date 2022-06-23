@@ -1,6 +1,24 @@
 name: check out project
 
-on: [push, pull_request]
+# on: [push, pull_request]
+# de su dung pull_request voi types = [opened,closed, assigned..]
+# thi ta viet nhu sau
+
+on:
+  # push:
+  # schedule:
+  #   - cron: "* * * * *" # * mean every value, fromat is Day - Month - Year - Hour - Minute
+  # pull_request:
+  #   branches: [master, luke]
+  #   types: [opened, assigned, closed]
+  push:
+    branches:
+      - master
+      - "feature/*" # this apply for any branch start from feature/. not work with feature/abcd/*/
+      - "feature/**" # work with feature/ and feature/*/*
+      - "!feature/featc" # ignore this branch
+    paths:
+      - "**.js" #the following workflow would run anytime you push a JavaScript file
 jobs:
   list-file:
     runs-on: ubuntu-latest
