@@ -1,0 +1,11 @@
+name: check out project
+
+on: [push]
+jobs:
+  list-file:
+    runs-on: ubuntu-latest
+    steps:
+      - name: list files
+        run: |
+          pwd
+          ls
