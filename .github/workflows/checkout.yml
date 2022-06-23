@@ -23,6 +23,8 @@ jobs:
   list-file:
     runs-on: ubuntu-latest
     steps:
+      - name: checkout-step
+        uses: actions/checkout@v1
       - name: list files
         id: list-file
         run: |
@@ -30,5 +32,3 @@ jobs:
           ls -a
           echo $GITHUB_SHA
           echo $GITHUB_WORKSPACE
-      - name: checkout-step
-        uses: actions/checkout@v1
