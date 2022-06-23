@@ -32,4 +32,3 @@ jobs:
           echo $GITHUB_WORKSPACE
       - name: checkout-step
         uses: actions/checkout@v1
-        run: npm -v
