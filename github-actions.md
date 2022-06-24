@@ -88,3 +88,7 @@ tool for support: https://crontab.guru
 [**] - matches zero or more any char
 [?] - match zero or single char (e.g `Octoc?t` = `Octocat` )
 []
+
+## encrypt
+
+gpg --symmetric --cipher-algo AES256 <filename.json>
