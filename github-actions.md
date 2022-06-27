@@ -96,8 +96,18 @@ gpg --symmetric --cipher-algo AES256 <filename.json>
 ## function && expression {{}}
 
 EXPRESSION: set environment variables in workflow files and access contexts
+https://docs.github.com/en/actions/learn-github-actions/contexts
 
 ## if
 
 if: failure() # previous step fail -> run the current step
 if: github.event_name == 'push'
+if: always() run whenever it need
+
+## timeout-minutes:
+
+## timeout-minutes: 360
+
+## Setup Strategy, Matrix & docker containers
+
+`fail-fast` : 1 job fails, all other jobs will stop
