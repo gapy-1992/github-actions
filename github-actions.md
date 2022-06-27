@@ -92,3 +92,12 @@ tool for support: https://crontab.guru
 ## encrypt
 
 gpg --symmetric --cipher-algo AES256 <filename.json>
+
+## function && expression {{}}
+
+EXPRESSION: set environment variables in workflow files and access contexts
+
+## if
+
+if: failure() # previous step fail -> run the current step
+if: github.event_name == 'push'
